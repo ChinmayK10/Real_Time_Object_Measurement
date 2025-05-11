@@ -22,32 +22,26 @@ OpenCV (opencv-python)
 NumPy
 
 ## How It Works
-1. Calibration with A4 Paper
-The system assumes an A4 paper in the scene as a size reference.
+  1. Calibration with A4 Paper
+  -The system assumes an A4 paper in the scene as a size reference.
 
-Detects the largest quadrilateral contour that matches the paper dimensions.
+  -Detects the largest quadrilateral contour that matches the paper dimensions.
 
-Warps the perspective using the paper's corners to normalize measurements.
+  -Warps the perspective using the paper's corners to normalize measurements.
 
-2. Object Detection
-Searches for contours within the warped frame (i.e., within the A4 boundary).
+  2. Object Detection
+  -Searches for contours within the warped frame (i.e., within the A4 boundary).
 
-Filters based on area and polygon vertex count (usually 4 for rectangles).
+  -Filters based on area and polygon vertex count (usually 4 for rectangles).
 
-Calculates real-world width and height using pixel-distance scaling.
+  -Calculates real-world width and height using pixel-distance scaling.
 
-3. Visualization
-Draws contours and arrows indicating object dimensions.
+  3. Visualization
+  -Draws contours and arrows indicating object dimensions.
 
-Annotates the image with the measured values (in cm).
+  -Annotates the image with the measured values (in cm).
 
-Displays both the original and warped/processed frames.
-
-## File Structure
-.
-├── main.py              # Main script for webcam/image-based measurement
-├── utlis.py             # Utility functions for image processing
-├── README.md            # Project documentation
+  -Displays both the original and warped/processed frames.
 
 # Usage
 ## Webcam Mode
