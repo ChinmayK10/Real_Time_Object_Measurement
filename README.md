@@ -1,7 +1,7 @@
-## Object Dimension Measurement using OpenCV and A4 Reference
+# Object Dimension Measurement using OpenCV and A4 Reference
 This project is a computer vision-based object dimension measurement system that utilizes an A4 paper as a reference object for real-time or static image analysis using OpenCV. It extracts contours, detects quadrilateral shapes, warps the perspective to a calibrated plane, and overlays real-world dimensions (in centimeters) of detected objects based on pixel-to-metric scale mapping.
 
-# Features
+## Features
 -Supports both real-time webcam feed and static image input.
 
 -Uses A4 paper (210mm × 297mm) as a known reference for dimension calibration.
@@ -16,12 +16,12 @@ This project is a computer vision-based object dimension measurement system that
 
 -Modular utility functions in utlis.py for reusable computer vision workflows.
 
-# Requirements
+## Requirements
 Python 3.6+
 OpenCV (opencv-python)
 NumPy
 
-# How It Works
+## How It Works
 1. Calibration with A4 Paper
 The system assumes an A4 paper in the scene as a size reference.
 
@@ -43,16 +43,16 @@ Annotates the image with the measured values (in cm).
 
 Displays both the original and warped/processed frames.
 
-# File Structure
+## File Structure
 .
 ├── main.py              # Main script for webcam/image-based measurement
 ├── utlis.py             # Utility functions for image processing
 ├── README.md            # Project documentation
 
-## Usage
-# Webcam Mode
+# Usage
+## Webcam Mode
 Ensure a webcam is connected and an A4 paper is placed flat in the frame.
-# Static Image Mode
+## Static Image Mode
 Edit main.py:
 
 webcam = False
